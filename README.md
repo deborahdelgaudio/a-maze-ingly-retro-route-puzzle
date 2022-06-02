@@ -24,3 +24,24 @@ Object type allowed fields
   name: String //Object Name
 ```
 
+## Usage
+
+The application could be used with Docker, the first step is to build the Docker container running:
+```shell
+docker build -t ${name} .
+```
+
+### Build :package:
+```shell
+ docker run -v $(pwd):/mnt -p 9090:9090 -w /mnt ${name} ./scripts/build.sh
+```
+
+### Tests :test_tube:
+```shell
+ docker run -v $(pwd):/mnt -p 9090:9090 -w /mnt ${name} ./scripts/tests.sh
+```
+
+### Run :gear:
+```shell
+ docker run -v $(pwd):/mnt -p 9090:9090 -w /mnt ${name} ./scripts/run.sh
+```

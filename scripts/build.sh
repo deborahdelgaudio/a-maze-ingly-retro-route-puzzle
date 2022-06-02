@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "App built!"
+pip install -r requirements.txt
