@@ -36,7 +36,7 @@ class FindPathRequestBody(BaseModel):
         rooms = values.get("map").rooms
         objects_in_map = set([o.name for room in rooms for o in room.objects])
         if not set(values.get("objects_to_collect")).issubset(objects_in_map):
-            raise ValueError(f"Objects requested are not in the map!")
+            raise ValueError(f"Requested Objects to Collect are not in the map!")
         return values
 
     class Config:
