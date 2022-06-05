@@ -1,10 +1,10 @@
-from typing import List
+from typing import List, Tuple
 
 from src.entities import UndirectedGraph, Map, Step
 
 
-def _dfs(graph, objects_to_collect, map):
-    def run(room_id, visited, path, poket):
+def _dfs(graph: UndirectedGraph, objects_to_collect: List[str], map: Map):
+    def run(room_id: int, visited: List[int], path: List[Tuple[int, int]], poket: List[Tuple[int, str]]):
         if not objects_to_collect:
             return
 
