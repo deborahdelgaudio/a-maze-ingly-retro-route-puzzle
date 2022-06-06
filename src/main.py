@@ -13,11 +13,6 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 
-@app.get("/")
-def healthcheck():
-    return {"Healthcheck": True}
-
-
 class FindPathRequestBody(BaseModel):
     map: Map
     start_room_id: int
@@ -54,6 +49,11 @@ class FindPathRequestBody(BaseModel):
                 "objects_to_collect": ["Knife", "Potted Plant"]
             }
         }
+
+
+@app.get("/")
+def healthcheck():
+    return {"Healthcheck": True}
 
 
 @app.post("/puzzle/find/path", response_model=List[Step])

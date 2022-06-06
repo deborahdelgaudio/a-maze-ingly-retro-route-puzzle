@@ -117,3 +117,6 @@ containing a body like this:
 }
 ```
 It's also possible to interact with a beautiful interface that contains the entire OpenAPI specification at `0.0.0.0:9090/docs`.
+
+### Repository structure
+The implementation follows [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) guidelines.
